@@ -1,0 +1,7 @@
+name: Call a reusable workflow
+
+on: push
+
+jobs:
+  call-workflow:
+    uses: babashunya/github-actions-base/.github/workflows/sample.yml@add-sample-actions
