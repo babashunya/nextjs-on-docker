@@ -4,4 +4,4 @@ on: push
 
 jobs:
   call-workflow:
-    uses: babashunya/github-actions-base/.github/workflows/reusable-workflow.yml@add-sample-actions
+    uses: babashunya/github-actions-base-private/.github/workflows/reusable-workflow.yml@add-sample-actions
