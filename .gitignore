@@ -1,3 +1,40 @@
-nextjs-on-docker/node_modules
-nextjs-on-docker/.next
 node_modules
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+nextjs-on-docker/node_modules
+nextjs-on-docker/.pnp
+nextjs-on-docker/.pnp.js
+
+# testing
+nextjs-on-docker/coverage
+
+# next.js
+nextjs-on-docker/.next/
+nextjs-on-docker/out/
+
+# production
+nextjs-on-docker/build
+
+# misc
+nextjs-on-docker/.DS_Store
+nextjs-on-docker/*.pem
+
+# debug
+nextjs-on-docker/npm-debug.log*
+nextjs-on-docker/yarn-debug.log*
+nextjs-on-docker/yarn-error.log*
+nextjs-on-docker/.pnpm-debug.log*
+
+# local env files
+nextjs-on-docker/.env*.local
+
+# env files
+.env
+
+# vercel
+nextjs-on-docker/.vercel
+
+# typescript
+nextjs-on-docker/*.tsbuildinfo
