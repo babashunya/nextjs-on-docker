@@ -1,12 +1,12 @@
-import { GetStaticProps, NextPage } from 'next'
-import Head from 'next/head'
+import { GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
 
 type SSGProps = {
-  message: string
-}
+  message: string;
+};
 
 const SSG: NextPage<SSGProps> = (props) => {
-  const { message } = props
+  const { message } = props;
   return (
     <div>
       {/* Headコンポーネントで包むと、その要素は<head>タグに配置されます */}
@@ -21,18 +21,18 @@ const SSG: NextPage<SSGProps> = (props) => {
         <p>{message}</p>
       </main>
     </div>
-  )
-}
+  );
+};
 
 export const getStaticProps: GetStaticProps<SSGProps> = async (context) => {
-  const timestamp = new Date().toLocaleString()
-  const message = `${timestamp} にgetStaticPropsが実行されました`
-  console.log(message)
+  const timestamp = new Date().toLocaleString();
+  const message = `${timestamp} にgetStaticPropsが実行されました`;
+  console.log(message);
   return {
     props: {
       message,
     },
-  }
-}
+  };
+};
 
-export default SSG
+export default SSG;
