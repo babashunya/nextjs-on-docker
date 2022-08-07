@@ -1,10 +1,10 @@
-import { GetStaticPaths, NextPage, GetStaticProps } from "next";
+import { GetStaticPaths, NextPage, GetStaticProps } from 'next';
 import Head from 'next/head';
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
 type ISRProps = {
   message: string;
-}
+};
 
 const ISR: NextPage<ISRProps> = (props) => {
   const { message } = props;
@@ -12,7 +12,7 @@ const ISR: NextPage<ISRProps> = (props) => {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   return (
@@ -22,14 +22,12 @@ const ISR: NextPage<ISRProps> = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <p>
-          このページはISRによってビルド時に生成されたページです。
-        </p>
+        <p>このページはISRによってビルド時に生成されたページです。</p>
         <p>{message}</p>
       </main>
     </div>
-  )
-}
+  );
+};
 
 export const getStaticSideProps: GetStaticProps<ISRProps> = async (context) => {
   const timestamp = new Date().toLocaleString();
@@ -40,7 +38,7 @@ export const getStaticSideProps: GetStaticProps<ISRProps> = async (context) => {
       message,
     },
     revalidate: 60,
-  }
-}
+  };
+};
 
-export default ISR
+export default ISR;
